@@ -1,0 +1,34 @@
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\bin\Debug\net6.0\CMS.Restaurant.Service.deps.json
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\bin\Debug\net6.0\CMS.Restaurant.Service.dll
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\bin\Debug\net6.0\CMS.Restaurant.Service.pdb
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\bin\Debug\net6.0\CMS.Restaurant.Entities.dll
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\bin\Debug\net6.0\CMS.Restaurant.Repository.dll
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\bin\Debug\net6.0\CMS.Restaurant.Repository.pdb
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\bin\Debug\net6.0\CMS.Restaurant.Entities.pdb
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\obj\Debug\net6.0\CMS.Restaurant.Service.csproj.AssemblyReference.cache
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\obj\Debug\net6.0\CMS.Restaurant.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\obj\Debug\net6.0\CMS.Restaurant.Service.AssemblyInfoInputs.cache
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\obj\Debug\net6.0\CMS.Restaurant.Service.AssemblyInfo.cs
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\obj\Debug\net6.0\CMS.Restaurant.Service.csproj.CoreCompileInputs.cache
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\obj\Debug\net6.0\CMS.Restaurant.Service.csproj.CopyComplete
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\obj\Debug\net6.0\CMS.Restaurant.Service.dll
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\obj\Debug\net6.0\refint\CMS.Restaurant.Service.dll
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\obj\Debug\net6.0\CMS.Restaurant.Service.pdb
+D:\Maliha Projects\Maliha.Bar\Bar.Backend\CMS.Restaurant.Service\obj\Debug\net6.0\ref\CMS.Restaurant.Service.dll
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\bin\Debug\net6.0\Boilerplate.Service.deps.json
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\bin\Debug\net6.0\Boilerplate.Service.dll
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\bin\Debug\net6.0\Boilerplate.Service.pdb
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\bin\Debug\net6.0\Boilerplate.Entities.dll
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\bin\Debug\net6.0\Boilerplate.Repository.dll
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\bin\Debug\net6.0\Boilerplate.Repository.pdb
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\bin\Debug\net6.0\Boilerplate.Entities.pdb
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\obj\Debug\net6.0\Boilerplate.Service.csproj.AssemblyReference.cache
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\obj\Debug\net6.0\Boilerplate.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\obj\Debug\net6.0\Boilerplate.Service.AssemblyInfoInputs.cache
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\obj\Debug\net6.0\Boilerplate.Service.AssemblyInfo.cs
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\obj\Debug\net6.0\Boilerplate.Service.csproj.CoreCompileInputs.cache
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\obj\Debug\net6.0\Boilerplate.Service.csproj.CopyComplete
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\obj\Debug\net6.0\Boilerplate.Service.dll
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\obj\Debug\net6.0\refint\Boilerplate.Service.dll
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\obj\Debug\net6.0\Boilerplate.Service.pdb
+D:\.Net Core\Open Source Project\Boilerplate\Boilerplate.Service\obj\Debug\net6.0\ref\Boilerplate.Service.dll

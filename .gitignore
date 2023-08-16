@@ -1,0 +1,11 @@
+/CMS.Service/bin
+/CMS.Service/obj
+/CMS.Repository/obj
+/CMS.Repository/bin
+/CMS.Entities/bin
+/CMS.Entities/obj
+/.vs
+/CMS.Web/wwwroot/member_files
+*.suo
+*.vsidx
+*.v2
