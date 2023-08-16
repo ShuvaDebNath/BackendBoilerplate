@@ -17,10 +17,10 @@ Provide a short description explaining the what, why, and how of your project. U
 
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
-Step 1: Run the project
-Step 2: Import the json file in POSTMAN
-Step 3: Create database & table accordingly
-Step 4: Change the Connection String from appsetting.json file
+- Run the project
+- Import the json file in POSTMAN
+- Create database & table accordingly
+- Change the Connection String from appsetting.json file
 
 ## Features
 
