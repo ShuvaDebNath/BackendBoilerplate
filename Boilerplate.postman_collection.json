@@ -1,0 +1,953 @@
+{
+	"info": {
+		"_postman_id": "ccb65f37-e55c-4c27-bdf1-e1dbfedad04a",
+		"name": "Boilerplate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11639097"
+	},
+	"item": [
+		{
+			"name": "Purchase",
+			"item": [
+				{
+					"name": "Purchase.SaveData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiZjVjYWM4OTktMTRiYi00ZGY0LTg0MGEtMWNiNzEwZDViNmQ5IiwibmJmIjoxNjYyMzUyNDAxLCJleHAiOjE2NjIzOTU2MDEsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.ie8yFLvmxqluNEIHMiSuyRhoZj7Lc592Ev45N2lIx9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"msiId\": \"\",\r\n    \"supplierId\": \"ae2ee487-d921-43a3-a4a2-50b85352d330\",\r\n    \"mrrNo\": \"\",\r\n    \"totalQty\": 1,\r\n    \"totalAmount\": 1,\r\n    \"receiveDate\": \"2022-01-01T00:00:00\",\r\n    \"details\": [\r\n        {\r\n            \"msidId\": \"\",\r\n            \"msiId\": \"\",\r\n            \"challanNo\": \"123\",\r\n            \"itemId\": \"9D130427-E7C0-4718-9C3D-36F1C3487E6C\",\r\n            \"qty\": 1,\r\n            \"price\": 1,\r\n            \"amount\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/Purchase/SaveData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"Purchase",
+								"SaveData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Purchase.GetInitialData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiZjVjYWM4OTktMTRiYi00ZGY0LTg0MGEtMWNiNzEwZDViNmQ5IiwibmJmIjoxNjYyMzUyNDAxLCJleHAiOjE2NjIzOTU2MDEsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.ie8yFLvmxqluNEIHMiSuyRhoZj7Lc592Ev45N2lIx9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44372/api/Purchase/GetInitialData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"Purchase",
+								"GetInitialData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Purchase.GetAllData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiZjVjYWM4OTktMTRiYi00ZGY0LTg0MGEtMWNiNzEwZDViNmQ5IiwibmJmIjoxNjYyMzUyNDAxLCJleHAiOjE2NjIzOTU2MDEsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.ie8yFLvmxqluNEIHMiSuyRhoZj7Lc592Ev45N2lIx9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44372/api/Purchase/GetAllData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"Purchase",
+								"GetAllData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Purchase.GetDataById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiZjVjYWM4OTktMTRiYi00ZGY0LTg0MGEtMWNiNzEwZDViNmQ5IiwibmJmIjoxNjYyMzUyNDAxLCJleHAiOjE2NjIzOTU2MDEsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.ie8yFLvmxqluNEIHMiSuyRhoZj7Lc592Ev45N2lIx9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44372/api/Purchase/GetDataById?MSIId=5539a0de-4b55-4637-a179-77d5e57bef6e",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"Purchase",
+								"GetDataById"
+							],
+							"query": [
+								{
+									"key": "MSIId",
+									"value": "5539a0de-4b55-4637-a179-77d5e57bef6e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Purchase.UpdateData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiZjVjYWM4OTktMTRiYi00ZGY0LTg0MGEtMWNiNzEwZDViNmQ5IiwibmJmIjoxNjYyMzUyNDAxLCJleHAiOjE2NjIzOTU2MDEsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.ie8yFLvmxqluNEIHMiSuyRhoZj7Lc592Ev45N2lIx9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"msiId\": \"5539a0de-4b55-4637-a179-77d5e57bef6e\",\r\n    \"supplierId\": \"ae2ee487-d921-43a3-a4a2-50b85352d330\",\r\n    \"mrrNo\": \"MRR-1\",\r\n    \"totalQty\": 1,\r\n    \"totalAmount\": 1,\r\n    \"receiveDate\": \"2022-01-01T00:00:00\",\r\n    \"details\": [\r\n        {\r\n            \"msidId\": \"\",\r\n            \"msiId\": \"5539a0de-4b55-4637-a179-77d5e57bef6e\",\r\n            \"challanNo\": \"124\",\r\n            \"itemId\": \"9D130427-E7C0-4718-9C3D-36F1C3487E6C\",\r\n            \"qty\": 1,\r\n            \"price\": 1,\r\n            \"amount\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/Purchase/UpdateData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"Purchase",
+								"UpdateData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Purchase.DeleteData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiZjVjYWM4OTktMTRiYi00ZGY0LTg0MGEtMWNiNzEwZDViNmQ5IiwibmJmIjoxNjYyMzUyNDAxLCJleHAiOjE2NjIzOTU2MDEsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.ie8yFLvmxqluNEIHMiSuyRhoZj7Lc592Ev45N2lIx9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"msiId\": \"5539a0de-4b55-4637-a179-77d5e57bef6e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/Purchase/DeleteData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"Purchase",
+								"DeleteData"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sales",
+			"item": [
+				{
+					"name": "Sales.SaveData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiODI5ODdmNjEtYTUyNi00OWIyLTljZDUtYTVlNTQ0ZTg3YjU2IiwibmJmIjoxNjYyNDU5MTI5LCJleHAiOjE2NjI1MDIzMjksImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.ITsSy83vgFaykA90yv64GO64dPvg7Qyh6-5ZECs8XTA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tableNameMaster\": \"SalesInfoSingle\",\r\n    \"tableNameChild\": \"SalesInfoDetails\",\r\n    \"columnNamePrimary\": \"SISId\",\r\n    \"columnNameForign\": \"SISId\",\r\n    \"columnNameSerialNo\": \"InvoiceNo\",\r\n    \"serialType\": \"Sales\",\r\n    \"IsFlag\":\"Member_Check_for_Sales\",\r\n    \"data\": {\r\n        \"SISId\": \"\",\r\n        \"InvoiceNo\": \"Invoice-\",\r\n        \"InvoiceDate\": \"2022-01-01\",\r\n        \"MemberId\": \"00513edb-5b17-4b91-8a07-882f14d8cd17\",\r\n        \"PromoCode\": \"\",\r\n        \"PayMode\": \"Cash\",\r\n        \"CardType\": \"\",\r\n        \"CardNo\": \"\",\r\n        \"ApproveCode\": \"\",\r\n        \"TotalQty\": \"1\",\r\n        \"SubTotal\": \"1\",\r\n        \"TotalDiscount\": \"0\",\r\n        \"GrandTotal\": \"1\",\r\n        \"Due\": \"0\"\r\n    },\r\n    \"detailsData\": [\r\n        {\r\n            \"SIDId\": \"newid()\",\r\n            \"SISId\": \"\",\r\n            \"ItemId\": \"9D130427-E7C0-4718-9C3D-36F1C3487E6C\",\r\n            \"SalesUnitId\": \"EFCEF4EE-5582-4258-8867-BB6B0884F2C6\",\r\n            \"Qty\": \"1\",\r\n            \"Rate\": \"1\",\r\n            \"Amount\": \"1\"\r\n        },\r\n        {\r\n            \"SIDId\": \"newid()\",\r\n            \"SISId\": \"\",\r\n            \"ItemId\": \"9D130427-E7C0-4718-9C3D-36F1C3487E6C\",\r\n            \"SalesUnitId\": \"EFCEF4EE-5582-4258-8867-BB6B0884F2C6\",\r\n            \"Qty\": \"1\",\r\n            \"Rate\": \"1\",\r\n            \"Amount\": \"1\"\r\n        }\r\n    ],\r\n    \"whereParams\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/DoubleMasterEntry/Insert",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"DoubleMasterEntry",
+								"Insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sales.UpdateData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiMDFkN2YwOWItODVhYi00OGViLTk0YjMtNGI2MzI4YWJiOGUxIiwibmJmIjoxNjYyMzY4OTA3LCJleHAiOjE2NjI0MTIxMDcsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.J6FX4qkTdAjdNxsUgw6WcDmJkiZNO8pX2td4tG0H9Vc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tableNameMaster\": \"SalesInfoSingle\",\r\n    \"tableNameChild\": \"SalesInfoDetails\",\r\n    \"columnNamePrimary\": \"SISId\",\r\n    \"columnNameForign\": \"SISId\",\r\n    \"columnNameSerialNo\": \"InvoiceNo\",\r\n    \"serialType\": \"Sales\",\r\n    \"data\": {\r\n        \"SISId\": \"\",\r\n        \"InvoiceNo\": \"Invoice-2\",\r\n        \"InvoiceDate\": \"2022-01-01\",\r\n        \"MemberId\": \"00513edb-5b17-4b91-8a07-882f14d8cd16\",\r\n        \"PromoCode\": \"\",\r\n        \"PayMode\": \"Cash\",\r\n        \"CardType\": \"\",\r\n        \"CardNo\": \"\",\r\n        \"ApproveCode\": \"\",\r\n        \"TotalQty\": \"1\",\r\n        \"SubTotal\": \"1\",\r\n        \"TotalDiscount\": \"0\",\r\n        \"GrandTotal\": \"1\",\r\n        \"Due\": \"0\"\r\n    },\r\n    \"detailsData\": [\r\n        {\r\n            \"SIDId\": \"newid()\",\r\n            \"SISId\": \"\",\r\n            \"ItemId\": \"9D130427-E7C0-4718-9C3D-36F1C3487E6C\",\r\n            \"SalesUnitId\": \"EFCEF4EE-5582-4258-8867-BB6B0884F2C6\",\r\n            \"Qty\": \"1\",\r\n            \"Rate\": \"1\",\r\n            \"Amount\": \"1\"\r\n        }\r\n    ],\r\n    \"whereParams\": { \"SISId\": \"a2195e2f-4040-4239-bcd7-c1190d0bf51f\" }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/DoubleMasterEntry/Update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"DoubleMasterEntry",
+								"Update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sales.Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiMDFkN2YwOWItODVhYi00OGViLTk0YjMtNGI2MzI4YWJiOGUxIiwibmJmIjoxNjYyMzY4OTA3LCJleHAiOjE2NjI0MTIxMDcsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.J6FX4qkTdAjdNxsUgw6WcDmJkiZNO8pX2td4tG0H9Vc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tableNameMaster\": \"SalesInfoSingle\",\r\n    \"tableNameChild\": \"SalesInfoDetails\",\r\n    \"columnNamePrimary\": \"SISId\",\r\n    \"columnNameForign\": \"SISId\",\r\n    \"columnNameSerialNo\": \"\",\r\n    \"serialType\": \"\",\r\n    \"data\": {},\r\n    \"detailsData\": [],\r\n    \"whereParams\": { \"SISId\": \"a2195e2f-4040-4239-bcd7-c1190d0bf51f\" }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/DoubleMasterEntry/Delete",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"DoubleMasterEntry",
+								"Delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sales.GetAllData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiZjJjODkyNmMtNWVlZC00NmM4LWI2YzctMDgwNDg3NGE2MTI3IiwibmJmIjoxNjYyNDQwNDY5LCJleHAiOjE2NjI0ODM2NjksImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.JwaJu5Akyqvq93jrjpFkL9eShSIcwzgM5F1kBkis15E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"procedureName\": \"prc_SalesGetAllData\",\r\n  \"parameters\": {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/GetData/GetAllData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"GetData",
+								"GetAllData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sales.GetInitialData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiMDFkN2YwOWItODVhYi00OGViLTk0YjMtNGI2MzI4YWJiOGUxIiwibmJmIjoxNjYyMzY4OTA3LCJleHAiOjE2NjI0MTIxMDcsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.J6FX4qkTdAjdNxsUgw6WcDmJkiZNO8pX2td4tG0H9Vc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"procedureName\": \"prc_SalesInitialData\",\r\n  \"parameters\": {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/GetData/GetInitialData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"GetData",
+								"GetInitialData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sales.GetDataById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiMDFkN2YwOWItODVhYi00OGViLTk0YjMtNGI2MzI4YWJiOGUxIiwibmJmIjoxNjYyMzY4OTA3LCJleHAiOjE2NjI0MTIxMDcsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.J6FX4qkTdAjdNxsUgw6WcDmJkiZNO8pX2td4tG0H9Vc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"procedureName\": \"prc_SalesGetDataById\",\r\n    \"parameters\": {\r\n        \"SISId\": \"688140c9-b234-4419-b5ad-909d6ce2a235\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/GetData/GetDataById",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"GetData",
+								"GetDataById"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserManage",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44372/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LogIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"null\",\r\n    \"fullName\": \"null\",\r\n    \"userName\": \"Sunshine-01\",\r\n    \"email\": \"null\",\r\n    \"password\": \"Maliha@78951358969\",\r\n    \"comId\": \"null\",\r\n    \"menuId\": \"null\",\r\n    \"emailConfirmed\": false,\r\n    \"isActive\": false,\r\n    \"userTypeId\": \"null\",\r\n  \"makeBy\": \"null\",\r\n  \"makeDate\": \"0001-01-01T00:00:00\",\r\n  \"insertTime\": \"0001-01-01T00:00:00\",\r\n  \"updateBy\": \"null\",\r\n  \"updateDate\": \"0001-01-01T00:00:00\",\r\n  \"updateTime\": \"0001-01-01T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/Accounts/Login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"Accounts",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rest Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHN1bnNoaW5lLmNvbSIsIlVzZXJJZCI6IjJhNzJlNDA2LTE1YTktNGJiNS05ODNiLWE0NGNiMGJkNzMyMyIsIlVzZXJOYW1lIjoic3Vuc2hpbmUtMDEiLCJqdGkiOiJjZThlMDFhMC02OTg3LTRjYzctYjhiZi1iZjgyZDQwNTFhYzEiLCJuYmYiOjE2NjM0ODcyNDQsImV4cCI6MTY2MzUzMDQ0NCwiaXNzIjoic2h1dmEuY29tIiwiYXVkIjoic2h1dmEuY29tIn0.3JP4DoLuDsWLydTUdZ2ThWflVqdt1rcEW9yOMlRgF4w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"2a72e406-15a9-4bb5-983b-a44cb0bd7323\",\r\n  \"newPassword\": \"Maliha@78951358969\",\r\n  \"confirmPassword\": \"Maliha@78951358969\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/CreateUser/ResetPassword",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"CreateUser",
+								"ResetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Menu & Button Permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHN1bnNoaW5lLmNvbSIsIlVzZXJJZCI6IjJhNzJlNDA2LTE1YTktNGJiNS05ODNiLWE0NGNiMGJkNzMyMyIsIlVzZXJOYW1lIjoic3Vuc2hpbmUtMDEiLCJqdGkiOiJjZThlMDFhMC02OTg3LTRjYzctYjhiZi1iZjgyZDQwNTFhYzEiLCJuYmYiOjE2NjM0ODcyNDQsImV4cCI6MTY2MzUzMDQ0NCwiaXNzIjoic2h1dmEuY29tIiwiYXVkIjoic2h1dmEuY29tIn0.3JP4DoLuDsWLydTUdZ2ThWflVqdt1rcEW9yOMlRgF4w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/Accounts/GetMenuAndButton",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"Accounts",
+								"GetMenuAndButton"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login With Only Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"null\",\r\n    \"fullName\": \"null\",\r\n    \"userName\": \"\",\r\n    \"email\": \"null\",\r\n    \"password\": \"Maliha@78951358969\",\r\n    \"comId\": \"null\",\r\n    \"menuId\": \"null\",\r\n    \"emailConfirmed\": false,\r\n    \"isActive\": false,\r\n    \"userTypeId\": \"null\",\r\n    \"makeBy\": \"null\",\r\n    \"makeDate\": \"0001-01-01T00:00:00\",\r\n    \"insertTime\": \"0001-01-01T00:00:00\",\r\n    \"updateBy\": \"null\",\r\n    \"updateDate\": \"0001-01-01T00:00:00\",\r\n    \"updateTime\": \"0001-01-01T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/Accounts/LoginWithPassword",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"Accounts",
+								"LoginWithPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHN1bnNoaW5lLmNvbSIsIlVzZXJJZCI6IjJhNzJlNDA2LTE1YTktNGJiNS05ODNiLWE0NGNiMGJkNzMyMyIsIlVzZXJOYW1lIjoic3Vuc2hpbmUtMDEiLCJqdGkiOiJhZWE4YTA1OS00OWJmLTRlNmEtYmQ4NC0wMDRlZmI0Nzk4ZjMiLCJuYmYiOjE2NjM1Nzg5MjAsImV4cCI6MTY2MzYyMjEyMCwiaXNzIjoic2h1dmEuY29tIiwiYXVkIjoic2h1dmEuY29tIn0.YTd8U4ryAax2z16TAFYZEaZRHdNQhtfg4nAJmZJAuGk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"\",\r\n  \"newPassword\": \"Maliha@78951358968\",\r\n  \"confirmPassword\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44372/api/CreateUser/CheckPassword",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44372",
+							"path": [
+								"api",
+								"CreateUser",
+								"CheckPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get token for testing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"\",\r\n    \"fullName\": \"\",\r\n    \"userName\": \"a\",\r\n    \"userTypeName\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"a\",\r\n    \"comId\": \"\",\r\n    \"concernId\": \"E27F631C-486D-43EF-AC55-E9202E9BD502\",\r\n    \"projectId\": \"DFE6E2E6-F620-432C-B51D-673742B4D300\",\r\n    \"menuId\": \"\",\r\n    \"emailConfirmed\": false,\r\n    \"isActive\": false,\r\n    \"userTypeId\": \"\",\r\n    \"makeBy\": \"\",\r\n    \"makeDate\": \"2022-09-15T09:36:15.641Z\",\r\n    \"updateBy\": \"\",\r\n    \"updateDate\": \"2022-09-15T09:36:15.641Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44372/api/LogIn/LogIn",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44372",
+					"path": [
+						"api",
+						"LogIn",
+						"LogIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Master Entry Get All Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiYWFjNzI4ZWMtZTBjZC00MzgzLThiOWYtMzMyZGY2OTA5MmZmIiwibmJmIjoxNjYyMDA4OTIzLCJleHAiOjE2NjIwNTIxMjMsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.8npbnfownrho6xvXCdLrabfEoHbOqVxavvZ1n-hxwQc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tableName\": \"GroupInfo\",\r\n  \"columnNames\": \"[GroupId],[GroupName]\",\r\n  \"queryParams\": \"\",\r\n  \"whereParams\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44372/api/MasterEntry/GetAll",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44372",
+					"path": [
+						"api",
+						"MasterEntry",
+						"GetAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Master Entry Get Data By Column",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiYWFjNzI4ZWMtZTBjZC00MzgzLThiOWYtMzMyZGY2OTA5MmZmIiwibmJmIjoxNjYyMDA4OTIzLCJleHAiOjE2NjIwNTIxMjMsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.8npbnfownrho6xvXCdLrabfEoHbOqVxavvZ1n-hxwQc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tableName\": \"GroupInfo\",\r\n  \"columnNames\": \"[GroupId],[GroupName]\",\r\n  \"queryParams\": \"\",\r\n  \"whereParams\": {\r\n          \"GroupId\": \"6EE583F9-8CA8-4C52-9007-667BEDFFDE46\"\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44372/api/MasterEntry/GetByColumns",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44372",
+					"path": [
+						"api",
+						"MasterEntry",
+						"GetByColumns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Master Entry Insert",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsIlVzZXJJZCI6IiIsIlVzZXJOYW1lIjoiYSIsImp0aSI6ImFhZjM0MmZlLWNjNDUtNDljNC05MzgyLWY0YjY5NjIyNzNiMCIsIm5iZiI6MTY2MzIyNTQ5MSwiZXhwIjoxNjYzMjY4NjkxLCJpc3MiOiJzaHV2YS5jb20iLCJhdWQiOiJzaHV2YS5jb20ifQ.HGCBiJLNPlhWnBFf6p032rQVxu2BdVSMCpIqOz9RF90",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TableName\": \"Projects\",\r\n    \"QueryParams\": {\r\n        \"[ProjectId]\": \"newid()\",\r\n        \"[ProjectName]\": \"PF (Provident Found)\",\r\n        \"[ShortDescription]\":\"PF (Provident Found)\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44372/api/MasterEntry/Insert",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44372",
+					"path": [
+						"api",
+						"MasterEntry",
+						"Insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Master Entry Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiYWFjNzI4ZWMtZTBjZC00MzgzLThiOWYtMzMyZGY2OTA5MmZmIiwibmJmIjoxNjYyMDA4OTIzLCJleHAiOjE2NjIwNTIxMjMsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.8npbnfownrho6xvXCdLrabfEoHbOqVxavvZ1n-hxwQc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TableName\": \"GroupInfo\",\r\n    \"QueryParams\": {\r\n        \"GroupName\": \"Test - 1\"\r\n    },\r\n    \"WhereParams\": {\r\n        \"GroupId\": \"0474E9E4-7347-4DCE-9E44-0BA4D72A922F\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44372/api/MasterEntry/Update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44372",
+					"path": [
+						"api",
+						"MasterEntry",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Master Entry Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiYWFjNzI4ZWMtZTBjZC00MzgzLThiOWYtMzMyZGY2OTA5MmZmIiwibmJmIjoxNjYyMDA4OTIzLCJleHAiOjE2NjIwNTIxMjMsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.8npbnfownrho6xvXCdLrabfEoHbOqVxavvZ1n-hxwQc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TableName\": \"GroupInfo\",\r\n    \"WhereParams\": {\r\n        \"GroupId\": \"0474E9E4-7347-4DCE-9E44-0BA4D72A922F\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44372/api/MasterEntry/Delete",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44372",
+					"path": [
+						"api",
+						"MasterEntry",
+						"Delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Master Entry List Insert",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlRlc3RFbWFpbCIsIlVzZXJJZCI6IjEiLCJVc2VyTmFtZSI6IkFkbWluIiwianRpIjoiODM2YjRhYzQtZmM5My00NGQxLTgzNGItMTBhNjA2ZjZlM2Q0IiwibmJmIjoxNjYyNzk5NTgzLCJleHAiOjE2NjI4NDI3ODMsImlzcyI6InNodXZhLmNvbSIsImF1ZCI6InNodXZhLmNvbSJ9.D-K3biCP28ETfewwnMAzPS8ciKbqKEdr1Jukulgymjo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tableNameChild\": \"SubMenus\",\r\n    \"detailsData\": [\r\n        {\r\n            \"subMenuId\": \"newId()\",\r\n            \"menuId\": \"90E640FB-096F-4EEE-83A9-AF8D21B4832B\",\r\n            \"subMenuName\": \"New Users\",\r\n            \"accessURL\": \"#\",\r\n            \"isParent\": false,\r\n            \"isChild\": true,\r\n            \"parentId\": \"\",\r\n            \"orderBy\": 2,\r\n            \"icon\": \"\",\r\n            \"ysnActive\": true\r\n        }\r\n    ],\r\n    \"whereParams\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44372/api/DoubleMasterEntry/InsertListData",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44372",
+					"path": [
+						"api",
+						"DoubleMasterEntry",
+						"InsertListData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
