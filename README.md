@@ -1,4 +1,4 @@
-# <Backend Boilerplate for ASP.NET CORE DEVELOPER>
+## Backend Boilerplate for ASP.NET CORE DEVELOPER
 
 ## Description
 
