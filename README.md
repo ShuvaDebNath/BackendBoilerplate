@@ -20,8 +20,9 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 ## Features
 
-Single table Entry
-Double table Entry
+- Generate TOKEN
+- Single table Entry
+- Double table Entry
 
 
 ## How to Contribute
