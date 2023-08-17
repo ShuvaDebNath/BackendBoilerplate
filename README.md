@@ -15,6 +15,8 @@ What are the steps required to install your project? Provide a step-by-step desc
 - Create database as BoilerplateDB
 - Restore the db backup file from Backup_DB folder
 - Change the Connection String from appsetting.json file
+- Before doing any operation GO Get token for testing URL for generate the token. 
+- After token generate, the project will work accordingly
 
 ## Features
 
