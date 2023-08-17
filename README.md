@@ -12,7 +12,8 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 - Run the project
 - Import the json file in POSTMAN
-- Create database & table accordingly
+- Create database as BoilerplateDB
+- Restore the db backup file from Backup_DB folder
 - Change the Connection String from appsetting.json file
 
 ## Features

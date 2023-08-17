@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj": {}
+    "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj": {}
   },
   "projects": {
-    "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj": {
+    "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj",
+        "projectUniqueName": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj",
         "projectName": "Boilerplate.Entities",
-        "projectPath": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj",
+        "projectPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj",
         "packagesPath": "C:\\Users\\Shuva\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Entities\\obj\\",
+        "outputPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -85,14 +85,14 @@
         }
       }
     },
-    "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj": {
+    "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj",
+        "projectUniqueName": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj",
         "projectName": "Boilerplate.Repository",
-        "projectPath": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj",
+        "projectPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj",
         "packagesPath": "C:\\Users\\Shuva\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Repository\\obj\\",
+        "outputPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -113,8 +113,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj": {
-                "projectPath": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj"
+              "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj": {
+                "projectPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj"
               }
             }
           }
@@ -162,14 +162,14 @@
         }
       }
     },
-    "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj": {
+    "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj",
+        "projectUniqueName": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj",
         "projectName": "Boilerplate.Service",
-        "projectPath": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj",
+        "projectPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj",
         "packagesPath": "C:\\Users\\Shuva\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Service\\obj\\",
+        "outputPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -190,8 +190,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj": {
-                "projectPath": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj"
+              "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj": {
+                "projectPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj"
               }
             }
           }
