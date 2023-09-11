@@ -1,19 +1,11 @@
 {
   "Version": 1,
-  "Hash": "Tne8t5wIxjD5w2CjVuKi5F48qUSxf9tNugOZcgXfy6Y=",
+  "Hash": "bJ5d6HU2H5IHRve96IX+2xXBymOuSC3EqM0z4DtKqTQ=",
   "Source": "Boilerplate.API",
   "BasePath": "_content/Boilerplate.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [
-    {
-      "Name": "Boilerplate.API\\wwwroot",
-      "Source": "Boilerplate.API",
-      "ContentRoot": "D:\\.Net Core\\Open Source Project\\Boilerplate\\Boilerplate.API\\wwwroot\\",
-      "BasePath": "_content/Boilerplate.API",
-      "Pattern": "**"
-    }
-  ],
+  "DiscoveryPatterns": [],
   "Assets": []
 }

@@ -1,6 +1,6 @@
 ﻿using Boilerplate.Entities.DBModels;
 using Boilerplate.Service.Interfaces;
-using Boilerplate.API.Message;
+using Boilerplate.Service.Message;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 

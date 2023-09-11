@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Linq;
 using System;
-using Boilerplate.API.Message;
+using Boilerplate.Service.Message;
 
 namespace Boilerplate.API.Filters
 {

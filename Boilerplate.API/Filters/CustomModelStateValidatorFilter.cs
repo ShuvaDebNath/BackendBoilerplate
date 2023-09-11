@@ -1,4 +1,4 @@
-﻿using Boilerplate.API.Message;
+﻿using Boilerplate.Service.Message;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Collections.Generic;
