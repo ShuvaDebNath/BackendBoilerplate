@@ -4,7 +4,7 @@ namespace Boilerplate.Entities.Common
 {
     public abstract class BaseEntity
     {
-        public string Id { get; set; }
+        protected string Id { get; set; }
 
         public string MakeBy { get; set; }
 

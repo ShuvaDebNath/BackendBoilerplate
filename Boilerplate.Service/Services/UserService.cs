@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 
 namespace Boilerplate.Service.Services
 {
-    class CreateUserService : ICreateUserService
+    class UserService : IUserService
     {
-        private readonly ICreateUserRepository _createUserRepository;
+        private readonly IUserRepository _createUserRepository;
 
-        public CreateUserService(ICreateUserRepository createUserRepository)
+        public UserService(IUserRepository createUserRepository)
         {
             _createUserRepository = createUserRepository;
         }

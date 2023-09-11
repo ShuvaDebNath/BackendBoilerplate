@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Boilerplate.Repository.Interfaces
 {
-    public interface ICreateUserRepository
+    public interface IUserRepository
     {
         Task<DataSet> GetAllUser(DataTableParams dataTableParams);
         Task<bool> ActiveInactive(string userId, bool isActive);

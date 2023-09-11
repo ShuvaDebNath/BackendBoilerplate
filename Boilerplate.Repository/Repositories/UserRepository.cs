@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace Boilerplate.Repository.Repositories
 {
-    public class CreateUserRepository : GenericRepository<AspNetUser>, ICreateUserRepository
+    public class UserRepository : GenericRepository<AspNetUser>, IUserRepository
     {
-        public CreateUserRepository(IConfiguration configuration) : base(configuration)
+        public UserRepository(IConfiguration configuration) : base(configuration)
         {
         }
 

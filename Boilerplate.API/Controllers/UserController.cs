@@ -14,11 +14,11 @@ namespace Boilerplate.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CreateUserController : BaseApiController
+    public class UserController : BaseApiController
     {
-        protected readonly ICreateUserService _createUserService;
+        protected readonly IUserService _createUserService;
         protected readonly IAuthService _authService;
-        public CreateUserController(ICreateUserService createUserService,
+        public UserController(IUserService createUserService,
             IAuthService authService)
         {
             _createUserService = createUserService;

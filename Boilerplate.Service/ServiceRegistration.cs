@@ -9,7 +9,7 @@ namespace Boilerplate.Service
         public static void AddBusinessLogicLayer(this IServiceCollection services)
         {
             services.AddTransient<IAuthService, AuthService>();
-            services.AddTransient<ICreateUserService, CreateUserService>();
+            services.AddTransient<IUserService, UserService>();
             services.AddTransient<IMasterEntryService, MasterEntryService>();
             services.AddTransient<IDoubleMasterEntryService, DoubleMasterEntryService>();
             services.AddScoped<IGetDataService, GetDataService>();

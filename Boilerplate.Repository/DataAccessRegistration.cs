@@ -15,7 +15,7 @@ namespace Boilerplate.Repository
         public static void AddDataAccessLayer(this IServiceCollection service)
         {
             service.AddTransient<IAuthRepository, AuthRepository>();
-            service.AddTransient<ICreateUserRepository, CreateUserRepository>();
+            service.AddTransient<IUserRepository, UserRepository>();
             service.AddTransient<IMasterEntryRepository, MasterEntryRepository>();
             service.AddTransient<IDoubleMasterEntryRepository, DoubleMasterEntryRepository>();
             service.AddScoped<IGetDataRepository, GetDataRepository>();

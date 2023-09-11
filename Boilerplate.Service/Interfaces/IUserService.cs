@@ -7,7 +7,7 @@ using Boilerplate.Entities.DTOs.UserCreate;
 
 namespace Boilerplate.Service.Interfaces
 {
-    public interface ICreateUserService
+    public interface IUserService
     {
         Task<(List<User> data, int totalCount, int filterCount)> GetAllUser(DataTableParams dataTableParams);
         Task<bool> ActiveInactive(string userId, bool isActive);
