@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj": {}
+    "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj": {}
   },
   "projects": {
-    "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj": {
+    "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj",
+        "projectUniqueName": "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj",
         "projectName": "Boilerplate.Entities",
-        "projectPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj",
-        "packagesPath": "C:\\Users\\Shuva\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\obj\\",
+        "projectPath": "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Shuva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -47,6 +47,10 @@
             "AspNetCore.Reporting": {
               "target": "Package",
               "version": "[2.1.0, )"
+            },
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.3.0, )"
             },
             "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
@@ -81,24 +85,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj": {
+    "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj",
+        "projectUniqueName": "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj",
         "projectName": "Boilerplate.Repository",
-        "projectPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj",
-        "packagesPath": "C:\\Users\\Shuva\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\obj\\",
+        "projectPath": "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Shuva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -113,8 +117,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj": {
-                "projectPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj"
+              "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj": {
+                "projectPath": "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Entities\\Boilerplate.Entities.csproj"
               }
             }
           }
@@ -158,24 +162,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj": {
+    "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj",
+        "projectUniqueName": "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj",
         "projectName": "Boilerplate.Service",
-        "projectPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj",
-        "packagesPath": "C:\\Users\\Shuva\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\obj\\",
+        "projectPath": "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\Boilerplate.Service.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Shuva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -190,8 +194,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj": {
-                "projectPath": "D:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj"
+              "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj": {
+                "projectPath": "E:\\.Net Core\\Open Source Project\\BackendBoilerplate\\Boilerplate.Repository\\Boilerplate.Repository.csproj"
               }
             }
           }
@@ -235,7 +239,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,17 +1,10 @@
 ﻿using Boilerplate.Entities.DTOs;
 using Boilerplate.Repository.Interfaces;
 using Boilerplate.Service.Interfaces;
-using Microsoft.Extensions.Logging;
 using Boilerplate.Service.Message;
-
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using System.Data;
 
 namespace Boilerplate.Service.Services
 {
@@ -42,7 +35,7 @@ namespace Boilerplate.Service.Services
             catch (Exception ex)
             {
                 string innserMsg = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
-                _logger.LogInformation($"Sourc: {ex.Source};\t Stack Trace: {ex.StackTrace};\t Message: {ex.Message};\t Inner Exception: {innserMsg};\n", "");
+                _logger.LogInformation($"Source: {ex.Source};\t Stack Trace: {ex.StackTrace};\t Message: {ex.Message};\t Inner Exception: {innserMsg};\n", "");
                 throw;
             }
         }
@@ -65,7 +58,7 @@ namespace Boilerplate.Service.Services
             catch (Exception ex)
             {
                 string innserMsg = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
-                _logger.LogInformation($"Sourc: {ex.Source};\t Stack Trace: {ex.StackTrace};\t Message: {ex.Message};\t Inner Exception: {innserMsg};\n", "");
+                _logger.LogInformation($"Source: {ex.Source};\t Stack Trace: {ex.StackTrace};\t Message: {ex.Message};\t Inner Exception: {innserMsg};\n", "");
                 throw;
             }
         }
@@ -91,7 +84,7 @@ namespace Boilerplate.Service.Services
             catch (Exception ex)
             {
                 string innserMsg = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
-                _logger.LogInformation($"Sourc: {ex.Source};\t Stack Trace: {ex.StackTrace};\t Message: {ex.Message};\t Inner Exception: {innserMsg};\n", "");
+                _logger.LogInformation($"Source: {ex.Source};\t Stack Trace: {ex.StackTrace};\t Message: {ex.Message};\t Inner Exception: {innserMsg};\n", "");
                 throw;
             }
         }

@@ -1,13 +1,9 @@
 ﻿using Boilerplate.Entities.DTOs;
 using Boilerplate.Repository.Interfaces;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Boilerplate.Repository.Repositories
 {
@@ -31,9 +27,9 @@ namespace Boilerplate.Repository.Repositories
                 DataTable dt = await GetDataInDataTableAsync(query: executeQuery.ToString(), selector: model.Parameters);
                 return dt;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -56,9 +52,9 @@ namespace Boilerplate.Repository.Repositories
                 dt.Load(await cmd.ExecuteReaderAsync());
                 return dt;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
             finally
             {
@@ -75,9 +71,9 @@ namespace Boilerplate.Repository.Repositories
                 DataSet ds = await GetDataInDataSetAsync(query: executeQuery.ToString(), selector: model.Parameters);
                 return ds;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
 

@@ -34,3 +34,16 @@ D:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Deb
 D:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\refint\Boilerplate.Entities.dll
 D:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\Boilerplate.Entities.pdb
 D:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\ref\Boilerplate.Entities.dll
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\bin\Debug\net6.0\Boilerplate.Entities.deps.json
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\bin\Debug\net6.0\Boilerplate.Entities.dll
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\bin\Debug\net6.0\Boilerplate.Entities.pdb
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\Boilerplate.Entities.csproj.AssemblyReference.cache
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\Boilerplate.Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\Boilerplate.Entities.AssemblyInfoInputs.cache
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\Boilerplate.Entities.AssemblyInfo.cs
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\Boilerplate.Entities.csproj.CoreCompileInputs.cache
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\Boilerplate.Entities.sourcelink.json
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\Boilerplate.Entities.dll
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\refint\Boilerplate.Entities.dll
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\Boilerplate.Entities.pdb
+E:\.Net Core\Open Source Project\BackendBoilerplate\Boilerplate.Entities\obj\Debug\net6.0\ref\Boilerplate.Entities.dll

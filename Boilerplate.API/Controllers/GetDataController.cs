@@ -1,10 +1,6 @@
-﻿using Boilerplate.Entities.DBModels;
-using Boilerplate.Entities.DTOs;
+﻿using Boilerplate.Entities.DTOs;
 using Boilerplate.Service.Interfaces;
-using Boilerplate.Service.Message;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Data;
 
 namespace Boilerplate.API.Controllers
 {
@@ -26,9 +22,9 @@ namespace Boilerplate.API.Controllers
             {
                 return Ok(await _getDataService.GetAllData(model));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-               throw;
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -39,9 +35,9 @@ namespace Boilerplate.API.Controllers
             {
                 return Ok(await _getDataService.GetDataById(model));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -52,9 +48,9 @@ namespace Boilerplate.API.Controllers
             {
                 return Ok(await _getDataService.GetInitialData(model));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
     }

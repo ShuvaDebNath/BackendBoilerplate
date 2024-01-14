@@ -12,11 +12,11 @@ namespace Boilerplate.Service.Interfaces
     {
         Task<UserInfo> GetAspNetUserAsync(UserInfo userInfo);
         Task<UserInfo> GetAspNetUserByPasswordAsync(UserInfo userInfo);
-        Task<(tblUserControl menuPermissions, int[] menuPermitted)> GetUserControlsInfo(string id);
+        Task<(UserControl menuPermissions, int[] menuPermitted)> GetUserControlsInfo(string id);
         Task<IList<Menu>> GetAllPermittedMenu(string userId);
-        Task<(IList<tblPagewiseAction> buttonPermissions, IEnumerable<dynamic> permittedButtons)> GetButtonPermissins(string userId);
-        Task<IList<tblMenu>> GetAllMenuByUserId(string userId);
-        Task<IList<tblButtonAction>> ButtonAction(string userId, int menuID);
+        Task<(IList<PagewiseAction> buttonPermissions, IEnumerable<dynamic> permittedButtons)> GetButtonPermissins(string userId);
+        Task<IList<Menus>> GetAllMenuByUserId(string userId);
+        Task<IList<ButtonAction>> ButtonAction(string userId, int menuID);
     }
 
 }

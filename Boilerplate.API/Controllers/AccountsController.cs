@@ -1,20 +1,16 @@
 ﻿using Boilerplate.Entities.DBModels;
-using Boilerplate.Entities.GlobalInfo;
 using Boilerplate.Service.Interfaces;
 using Boilerplate.Service.Message;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
+using static Boilerplate.Entities.Enum.Enums;
 
 namespace Boilerplate.API.Controllers
-{    
+{
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
@@ -46,13 +42,13 @@ namespace Boilerplate.API.Controllers
                 var (buttonPermissions, permittedButtons) = await _authService.GetButtonPermissins(menuPermissions.UserId);
 
                 return Ok(new { IsAuthorized = true, TOKEN = tokenString , PermittedMenus = permittedMenu, PermittedButtons = permittedButtons,
-                    UserName = user.UserName,FullName = menuPermissions.FullName,UserId = menuPermissions.UserId,
+                    UserName = user.UserName, FullName = menuPermissions.FullName, UserId = menuPermissions.UserId,
                     CompanyId = "bfd4ca78-3ec9-4798-8be9-5a9423917949",
                     user.PasswordPin });
             }
             else
             {
-                return Ok(new { IsAuthorized = false, IsViewWalkthrough = false, Data = (string)null, Message = "Invalid User", MessageType = "LoginFaild" });
+                return Ok(new { IsAuthorized = false, IsViewWalkthrough = false, Data = (string)null, Message = MessageTypes.InvalidUser, MessageType = MessageTypes.UnAuthorize });
             }
         }
 
@@ -79,7 +75,7 @@ namespace Boilerplate.API.Controllers
             }
             else
             {
-                return Ok(new { IsAuthorized = false, IsViewWalkthrough = false, Data = (string)null, Message = "Invalid User", MessageType = "LoginFaild" });
+                return Ok(new { IsAuthorized = false, IsViewWalkthrough = false, Data = (string)null, Message = MessageTypes.InvalidUser, MessageType = MessageTypes.UnAuthorize });
             }
         }
 
@@ -101,7 +97,7 @@ namespace Boilerplate.API.Controllers
                 }
                 else
                 {
-                    return Ok(new { ok = false, msg = GlobalParams.InvalidTokenMsg, innermsg = "" });
+                    return Ok(new { ok = false, msg = MessageTypes.InValidToken, innermsg = MessageTypes.NotFound });
                 }
             }
             catch (Exception ex)
@@ -155,8 +151,8 @@ namespace Boilerplate.API.Controllers
 
             List<Claim> claims = new List<Claim> {
                 new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
-                new Claim(GlobalParams.UserId, userInfo.Id),
-                new Claim(GlobalParams.UserName, userInfo.UserName),
+                new Claim(TokenVariableParams.UserId, userInfo.Id),
+                new Claim(TokenVariableParams.UserName, userInfo.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 

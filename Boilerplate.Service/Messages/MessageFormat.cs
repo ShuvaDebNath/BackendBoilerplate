@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace Boilerplate.Service.Message
@@ -14,6 +15,9 @@ namespace Boilerplate.Service.Message
         public string? MessageType { get; set; }
 
         public object? Data { get; set; }
+
+        public HttpStatusCode StatusCode { get; internal set; }
+
 
     }
 
