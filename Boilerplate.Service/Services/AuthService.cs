@@ -4,7 +4,6 @@ using Boilerplate.Entities.DTOs.UserCreate;
 using Boilerplate.Entities.Helpers;
 using Boilerplate.Repository.Interfaces;
 using Boilerplate.Service.Interfaces;
-using Boilerplate.Service.Message;
 using Microsoft.Extensions.Logging;
 
 namespace Boilerplate.Service.Services
