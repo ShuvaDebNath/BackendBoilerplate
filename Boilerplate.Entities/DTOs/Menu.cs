@@ -10,7 +10,7 @@ namespace Boilerplate.Entities.DTOs
         public string ParentMenuLogo { get; set; }
         public Nullable<bool> ParentIsActive { get; set; }
         public string ParentUiLink { get; set; }
-        public List<tblMenu> ChildMenus { get; set; }
+        public List<Menus> ChildMenus { get; set; }
 
         public Menu()
         {
@@ -25,7 +25,7 @@ namespace Boilerplate.Entities.DTOs
             ParentUiLink = string.IsNullOrEmpty(parentUiLink) ? "#" : parentUiLink;
         }
 
-        public Menu(string parentMenuName, string parentMenuLogo, bool parentIsActive, string parentUiLink, List<tblMenu> childMenus)
+        public Menu(string parentMenuName, string parentMenuLogo, bool parentIsActive, string parentUiLink, List<Menus> childMenus)
         {
             ParentMenuName = parentMenuName;
             ParentMenuLogo = parentMenuLogo;

@@ -1,8 +1,6 @@
 ﻿using Boilerplate.Entities.DBModels;
 using Boilerplate.Service.Interfaces;
-using Boilerplate.Service.Message;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace Boilerplate.API.Controllers
 {
@@ -24,9 +22,9 @@ namespace Boilerplate.API.Controllers
             {
                 return Ok(_masterEntryService.GetAll(item));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -37,9 +35,9 @@ namespace Boilerplate.API.Controllers
             {
                 return Ok(_masterEntryService.GetByColumns(item));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -50,9 +48,9 @@ namespace Boilerplate.API.Controllers
             {
                 return Ok(_masterEntryService.Insert(item, AuthUserName));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -63,9 +61,9 @@ namespace Boilerplate.API.Controllers
             {
                 return Ok(_masterEntryService.Update(item, AuthUserName));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -76,9 +74,9 @@ namespace Boilerplate.API.Controllers
             {
                 return Ok(_masterEntryService.Delete(item));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
     }
