@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Boilerplate.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c14a8343b4715383f78f3fbb910c3098ae836b5b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Boilerplate.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Boilerplate.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
