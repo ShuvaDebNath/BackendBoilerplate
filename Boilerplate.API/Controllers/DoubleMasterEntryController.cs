@@ -1,8 +1,6 @@
 ﻿using Boilerplate.Entities.DBModels;
 using Boilerplate.Service.Interfaces;
-using Boilerplate.Service.Message;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace Boilerplate.API.Controllers
 {
@@ -16,34 +14,6 @@ namespace Boilerplate.API.Controllers
             _masterEntryService = masterEntryService;
         }
 
-        //[HttpPost(nameof(GetAll))]
-        //public IActionResult GetAll([FromBody] MasterEntryModel item)
-        //{
-        //    var dt = _masterEntryService.GetAll(item);
-
-        //    if (dt != null)
-        //    {
-        //        var data = JsonConvert.SerializeObject(dt);
-        //        return Ok(MessageType.DataFound(data));
-        //    }
-
-        //    return Ok(MessageType.NotFound(null));
-        //}
-
-        //[HttpPost(nameof(GetByColumns))]
-        //public IActionResult GetByColumns([FromBody] MasterEntryModel item)
-        //{
-        //    var dt = _masterEntryService.GetByColumns(item);
-
-        //    if (dt != null)
-        //    {
-        //        var data = JsonConvert.SerializeObject(dt);
-        //        return Ok(MessageType.DataFound(data));
-        //    }
-
-        //    return Ok(MessageType.NotFound(null));
-        //}
-
         [HttpPost(nameof(Insert))]
         public async Task<IActionResult> Insert([FromBody] DoubleMasterEntryModel item)
         {
@@ -53,7 +23,7 @@ namespace Boilerplate.API.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception(ex.ToString());
             }
         }
         [HttpPost(nameof(InsertListData))]
@@ -63,9 +33,9 @@ namespace Boilerplate.API.Controllers
             {
                 return Ok(await _masterEntryService.SaveListData(item, AuthUserName));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -76,9 +46,9 @@ namespace Boilerplate.API.Controllers
             {
                 return Ok(await _masterEntryService.UpdateData(item, AuthUserName));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
 
@@ -89,9 +59,9 @@ namespace Boilerplate.API.Controllers
             {
                 return Ok(await _masterEntryService.DeleteData(item));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception(ex.ToString());
             }
         }
     }

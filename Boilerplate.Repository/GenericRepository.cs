@@ -2,14 +2,10 @@
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Boilerplate.Repository
 {
@@ -54,7 +50,7 @@ namespace Boilerplate.Repository
         public async Task<DataTable> GetDataInDataTableAsync(string query, object? selector = null)
         {
             using var connection = new SqlConnection(_connectionStringTransactionDB);
-            //var result = await connection.ExecuteReaderAsync(query, selector);
+
             DataTable table = new DataTable();
             table.Load(await connection.ExecuteReaderAsync(query, selector));
 
@@ -89,7 +85,7 @@ namespace Boilerplate.Repository
                 }
                 catch (Exception ex)
                 {
-
+                   throw new Exception(ex.Message);
                 }
             }
             return ds;
@@ -107,13 +103,14 @@ namespace Boilerplate.Repository
                 }
                 catch (Exception ex)
                 {
+                    throw new Exception(ex.Message);
                 }
 
                 return affectedRows;
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception(ex.Message);
             }
         }
 
@@ -131,6 +128,7 @@ namespace Boilerplate.Repository
                     }
                     catch (Exception ex)
                     {
+                        throw new Exception(ex.Message);
                     }
 
                     return affectedRows;
@@ -138,7 +136,7 @@ namespace Boilerplate.Repository
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception(ex.Message);
             }
         }
 
@@ -198,13 +196,13 @@ namespace Boilerplate.Repository
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception(ex.Message);
             }
         }
 
         public async Task<int> GenSerialNumberAsync(string? SerialType)
         {
-            Serial_No_Generate model = new()
+            SerialNoGenerate model = new()
             {
                 SerialType = SerialType,
                 SerialId = Guid.NewGuid().ToString()
@@ -216,7 +214,7 @@ namespace Boilerplate.Repository
                 using (var connection = new SqlConnection(_connectionStringTransactionDB))
                 {
                     await connection.OpenAsync();
-                    var data = await connection.QueryAsync<Serial_No_Generate>(maxNumberQuery.ToString(), new { SerialType = model.SerialType });
+                    var data = await connection.QueryAsync<SerialNoGenerate>(maxNumberQuery.ToString(), new { SerialType = model.SerialType });
                     if (data.Any())
                     {
                         var item = data.FirstOrDefault();
@@ -260,7 +258,7 @@ namespace Boilerplate.Repository
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception(ex.Message);
             }
             return model.SerialNo;
         }

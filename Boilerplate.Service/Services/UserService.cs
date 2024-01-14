@@ -4,6 +4,7 @@ using Boilerplate.Entities.DTOs.UserCreate;
 using Boilerplate.Entities.Helpers;
 using Boilerplate.Repository.Interfaces;
 using Boilerplate.Service.Interfaces;
+using Boilerplate.Service.Message;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -122,7 +123,7 @@ namespace Boilerplate.Service.Services
                 PasswordPin = pin.ToString("0000"),
             };
 
-            tblUserControl tbluser = new tblUserControl
+            UserControl tbluser = new UserControl
             {
                 UserId = Guid.NewGuid().ToString(),
                 Id = asp.Id,
@@ -136,12 +137,12 @@ namespace Boilerplate.Service.Services
 
             };
 
-            var pagewiseAction = new List<tblPagewiseAction>();
+            var pagewiseAction = new List<PagewiseAction>();
 
             foreach (MenuPerssion d in details)
             {
                 string menuPermission = "";
-                tblPagewiseAction obj = new tblPagewiseAction();
+                PagewiseAction obj = new PagewiseAction();
 
                 if (d.selected == true && d.ysnParent == false)
                 {
@@ -200,12 +201,12 @@ namespace Boilerplate.Service.Services
             menu = menu.Substring(0, (menu.Length - 1));
             #endregion
 
-            var pagewiseAction = new List<tblPagewiseAction>();
+            var pagewiseAction = new List<PagewiseAction>();
 
             foreach (MenuPerssion d in details)
             {
                 string menuPermission = "";
-                tblPagewiseAction obj = new tblPagewiseAction();
+                PagewiseAction obj = new PagewiseAction();
 
                 if (d.selected == true && d.ysnParent == false)
                 {
@@ -262,13 +263,13 @@ namespace Boilerplate.Service.Services
         {
             var ds = await _createUserRepository.GetUserEditData(userId);
 
-            List<tblMenu> menus = new List<tblMenu>();
+            List<Menus> menus = new List<Menus>();
 
             if (ds.Tables[1].Rows.Count > 0)
             {
                 for (var index = 0; index < ds.Tables[1].Rows.Count; index++)
                 {
-                    var menu = new tblMenu()
+                    var menu = new Menus()
                     {
                         MenuId = Convert.ToInt32(ds.Tables[1].Rows[index]["MenuId"].ToString()),
                         SubMenuName = ds.Tables[1].Rows[index]["SubMenuName"].ToString()
@@ -308,7 +309,7 @@ namespace Boilerplate.Service.Services
 
                                         if (actionList.Rows.Count > 0)
                                         {
-                                            tblButtonAction aBUtton = new tblButtonAction();
+                                            ButtonAction aBUtton = new ButtonAction();
                                             for (int l = 0; l < actionList.Rows.Count; l++)
                                             {
                                                 aBUtton.Id = Convert.ToInt32(actionList.Rows[l]["Id"].ToString());
@@ -346,7 +347,8 @@ namespace Boilerplate.Service.Services
 
         public Task<bool> CheckPassword(string passwordhash)
         {
-            return _createUserRepository.CheckPassword(passwordhash);
+          return _createUserRepository.CheckPassword(passwordhash);
+
         }
     }
 }

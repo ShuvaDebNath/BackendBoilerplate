@@ -1,21 +1,18 @@
-﻿using System;
+﻿namespace Boilerplate.Entities.Common;
 
-namespace Boilerplate.Entities.Common
+public abstract class BaseEntity
 {
-    public abstract class BaseEntity
-    {
-        protected string Id { get; set; }
+    protected string? Id { get; set; }
 
-        public string MakeBy { get; set; }
+    public string? MakeBy { get; set; }
 
-        public DateTime? MakeDate { get; set; }
+    public DateTime? MakeDate { get; set; }
 
-        public DateTime? InsertTime { get; set; } = DateTime.Now;
+    public DateTime? InsertTime { get; private set; } = DateTime.Now;
 
-        public string UpdateBy { get; set; }
+    public string? UpdateBy { get; set; }
 
-        public DateTime? UpdateDate { get; set; }
+    public DateTime? UpdateDate { get; set; }
 
-        public DateTime? UpdateTime { get; set; } = DateTime.Now;
-    }
+    public DateTime? UpdateTime { get; private set; } = DateTime.Now;
 }

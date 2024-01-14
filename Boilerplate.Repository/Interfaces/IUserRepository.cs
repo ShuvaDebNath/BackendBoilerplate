@@ -17,9 +17,9 @@ namespace Boilerplate.Repository.Interfaces
         Task<bool> ResetPassword(string passwordhash, string userId);
         Task<bool> CheckPassword(string passwordhash);
         Task<DataSet> GetUserBasicData();
-        Task<bool> SaveUser(AspNetUser asp, tblUserControl tbluser, List<tblPagewiseAction> pagewiseActions);
+        Task<bool> SaveUser(AspNetUser asp, UserControl tbluser, List<PagewiseAction> pagewiseActions);
         Task<bool> DeleteUser(string userId);
-        Task<bool> EditUser(string menu, UserCreate model, List<tblPagewiseAction> pagewiseActions);
+        Task<bool> EditUser(string menu, UserCreate model, List<PagewiseAction> pagewiseActions);
         Task<DataSet> GetUserEditData(string userId);
         Task<DataTable> GetUserAutoId();
         Task<DataTable> GetButtonActionByActionPermission(string actionPermission);

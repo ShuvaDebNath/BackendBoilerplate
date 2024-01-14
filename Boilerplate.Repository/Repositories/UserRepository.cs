@@ -3,11 +3,8 @@ using Boilerplate.Entities.DTOs;
 using Boilerplate.Entities.DTOs.UserCreate;
 using Boilerplate.Repository.Interfaces;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Threading.Tasks;
 
 namespace Boilerplate.Repository.Repositories
 {
@@ -89,7 +86,7 @@ namespace Boilerplate.Repository.Repositories
             return dt;
         }
 
-        public async Task<bool> SaveUser(AspNetUser asp, tblUserControl tbluser, List<tblPagewiseAction> pagewiseActions)
+        public async Task<bool> SaveUser(AspNetUser asp, UserControl tbluser, List<PagewiseAction> pagewiseActions)
         {
             string queryAspNetUsers = @"insert into AspNetUsers
             (Id, Email, EmailConfirmed, PasswordHash, UserName,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEnabled,AccessFailedCount,PasswordPin)
@@ -132,7 +129,7 @@ namespace Boilerplate.Repository.Repositories
             }
         }
         
-        public async Task<bool> EditUser(string menu, UserCreate model, List<tblPagewiseAction> pagewiseActions)
+        public async Task<bool> EditUser(string menu, UserCreate model, List<PagewiseAction> pagewiseActions)
         {
             string querytblUserControl = @"update tblUserControl set MenuId=@menu,DashboardPreview=@DashboardPreview where UserId=@UserId";
 
@@ -212,7 +209,7 @@ namespace Boilerplate.Repository.Repositories
             }
         }
 
-        private async Task<int> SavetblPagewiseActions(List<tblPagewiseAction> pagewiseActions, SqlConnection con, SqlTransaction trn)
+        private async Task<int> SavetblPagewiseActions(List<PagewiseAction> pagewiseActions, SqlConnection con, SqlTransaction trn)
         {
             string querytblPagewiseAction = @"insert into tblPagewiseAction
             (ActionID,UserId,MenuId,ActionPermission)

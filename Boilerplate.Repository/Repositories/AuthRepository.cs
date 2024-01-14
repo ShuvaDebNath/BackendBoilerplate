@@ -33,15 +33,15 @@ namespace Boilerplate.Repository.Repositories
             return result.FirstOrDefault();
         }
 
-        public async Task<(tblUserControl menuPermissions, int[] menuPermitted)> GetUserControlsInfo(string userId)
+        public async Task<(UserControl menuPermissions, int[] menuPermitted)> GetUserControlsInfo(string userId)
         {
             const string query = "select UserId Id,FullName,Id UserId,UserTypeId,MenuId,UserRoleID from tblUserControl where Id = @UserId";
             DataTable dt = await GetDataInDataTableAsync(query, new { UserId = userId });
-            tblUserControl menuPermissions = new tblUserControl();
+            UserControl menuPermissions = new UserControl();
 
             if (dt.Rows.Count > 0)
             {
-                menuPermissions = new tblUserControl()
+                menuPermissions = new UserControl()
                 {
                     MenuId = dt.Rows[0]["MenuId"].ToString(),
                     UserId = dt.Rows[0]["UserId"].ToString(),
@@ -82,13 +82,13 @@ namespace Boilerplate.Repository.Repositories
             foreach (DataRow parentMenu in parentMenus.Rows)
             {
                 DataRow[] childs = childMenus.Select("MenuName='" + parentMenu.ItemArray[1].ToString() + "'");
-                var tempChilds = new List<tblMenu>();
+                var tempChilds = new List<Menus>();
 
                 if (childs.Any())
                 {
                     foreach (DataRow child in childs)
                     {
-                        tblMenu aChild = new tblMenu()
+                        Menus aChild = new Menus()
                         {
                             MenuId = int.Parse(child["MenuId"].ToString()),
                             MenuName = child["MenuName"].ToString(),
@@ -147,7 +147,7 @@ namespace Boilerplate.Repository.Repositories
             return dtMenus;
         }
 
-        public async Task<(IList<tblPagewiseAction> buttonPermissions, IEnumerable<dynamic> permittedButtons)> GetButtonPermissins(string userId)
+        public async Task<(IList<PagewiseAction> buttonPermissions, IEnumerable<dynamic> permittedButtons)> GetButtonPermissins(string userId)
         {
             const string query = "select ActionID,UserId,MenuId,ActionPermission from tblPagewiseAction where UserId = @UserId";
 
@@ -155,10 +155,10 @@ namespace Boilerplate.Repository.Repositories
 
             if (dtButtonPermissions.Rows.Count > 0)
             {
-                List<tblPagewiseAction> buttonPermissions = new List<tblPagewiseAction>();
+                List<PagewiseAction> buttonPermissions = new();
                 buttonPermissions.AddRange(
                     from DataRow dr in dtButtonPermissions.Rows
-                    select new tblPagewiseAction()
+                    select new PagewiseAction()
                     {
                         ActionID = dr["ActionID"].ToString(),
                         ActionPermission = dr["ActionPermission"].ToString(),
@@ -166,11 +166,11 @@ namespace Boilerplate.Repository.Repositories
                         UserId = dr["UserId"].ToString(),
                     });
 
-                List<tblPagewiseAction> permittedButton = new List<tblPagewiseAction>();
+                List<PagewiseAction> permittedButton = new List<PagewiseAction>();
 
                 permittedButton.AddRange(
                     from DataRow dr in dtButtonPermissions.Rows
-                    select new tblPagewiseAction()
+                    select new PagewiseAction()
                     {
                         MenuId = int.Parse(dr["MenuId"].ToString()),
                         ActionPermissionArrya = dr["ActionPermission"].ToString().Split(",")

@@ -22,7 +22,14 @@
             Forbid,
             OK,
             NoContent,
-            StatusCode
+            StatusCode,
+            InvalidUser
+        }
+
+        public static class TokenVariableParams
+        {
+            public const string UserId = "UserId";
+            public const string UserName = "UserName";
         }
     }
 }

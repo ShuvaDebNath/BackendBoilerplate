@@ -4,20 +4,20 @@ using Boilerplate.Entities.DTOs.UserCreate;
 using Boilerplate.Entities.Helpers;
 using Boilerplate.Repository.Interfaces;
 using Boilerplate.Service.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+using Boilerplate.Service.Message;
+using Microsoft.Extensions.Logging;
 
 namespace Boilerplate.Service.Services
 {
     public class AuthService : IAuthService
     {
         private readonly IAuthRepository _authRepository;
+        private readonly ILogger<GetDataService> _logger;
 
-        public AuthService(IAuthRepository authRepository)
+        public AuthService(IAuthRepository authRepository, ILogger<GetDataService> logger)
         {
             _authRepository = authRepository;
+            _logger = logger;
         }
 
         public async Task<UserInfo> GetAspNetUserAsync(UserInfo userInfo)
@@ -36,7 +36,7 @@ namespace Boilerplate.Service.Services
 
             return result;
         }
-        public async Task<(tblUserControl menuPermissions, int[] menuPermitted)> GetUserControlsInfo(string id)
+        public async Task<(UserControl menuPermissions, int[] menuPermitted)> GetUserControlsInfo(string id)
         {
             var (menuPermissions, menuPermitted) = await _authRepository.GetUserControlsInfo(id);
 
@@ -49,68 +49,85 @@ namespace Boilerplate.Service.Services
             {
                 var permittedMenus = await _authRepository.GetAllPermittedMenu(userId);
 
-                return permittedMenus;
+                if (permittedMenus.Count > 0)
+                {
+                    _logger.LogInformation($"Data Found!");
+                    return permittedMenus;
+                }
+                _logger.LogInformation($"Data Not Found!");
+                return (IList<Menu>)Enumerable.Empty<Menu>();
             }
             catch (Exception ex)
             {
-                throw ex;
+                string innserMsg = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
+                _logger.LogInformation($"Source: {ex.Source};\t Stack Trace: {ex.StackTrace};\t Message: {ex.Message};\t Inner Exception: {innserMsg};\n", "");
+
+                throw new Exception(ex.Message);
             }
         }
 
-        public async Task<IList<tblButtonAction>> ButtonAction(string userId, int menuID)
+        public async Task<IList<ButtonAction>> ButtonAction(string userId, int menuID)
         {
             try
             {
                 var allMenuList = await _authRepository.ButtonAction(userId,menuID);
 
-                List<tblButtonAction> btns = new List<tblButtonAction>();
+                List<ButtonAction> btns = new List<ButtonAction>();
 
                 if (allMenuList.Rows.Count > 0)
                 {
                     for (var index = 0; index < allMenuList.Rows.Count; index++)
                     {
-                        tblButtonAction btnMenu = new tblButtonAction();
+                        ButtonAction btnMenu = new ButtonAction();
                         btnMenu.Id = int.Parse(allMenuList.Rows[index]["Id"].ToString());
                         btns.Add(btnMenu);
                     }
+                    _logger.LogInformation($"Data Found!");
+                    return btns;
                 }
-
-                return btns;
+                _logger.LogInformation($"Data Not Found!");
+                return (IList<ButtonAction>)Enumerable.Empty<ButtonAction>();
             }
             catch (Exception ex)
             {
-                throw ex;
+                string innserMsg = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
+                _logger.LogInformation($"Source: {ex.Source};\t Stack Trace: {ex.StackTrace};\t Message: {ex.Message};\t Inner Exception: {innserMsg};\n", "");
+                throw new Exception(ex.Message);
             }
         }
         
-        public async Task<IList<tblMenu>> GetAllMenuByUserId(string userId)
+        public async Task<IList<Menus>> GetAllMenuByUserId(string userId)
         {
             try
             {
                 var permittedMenus = await _authRepository.GetAllMenuByUserId(userId);
 
-                List<tblMenu> menus = new List<tblMenu>();
+                List<Menus> menus = new List<Menus>();
 
                 if (permittedMenus.Rows.Count > 0)
                 {
                     for (var index = 0; index < permittedMenus.Rows.Count; index++)
                     {
-                        tblMenu menu = new tblMenu();
+                        Menus menu = new Menus();
                         menu.UiLink = permittedMenus.Rows[index]["UiLink"].ToString();
                         menu.MenuId = int.Parse(permittedMenus.Rows[index]["MenuId"].ToString());
                         menus.Add(menu);
                     }
+                    _logger.LogInformation($"Data Found!");
+                    return menus;
                 }
-
-                return menus;
+                _logger.LogInformation($"Data Not Found!");
+                return (IList<Menus>)Enumerable.Empty<Menus>();
             }
             catch (Exception ex)
             {
-                throw ex;
+                string innserMsg = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
+                _logger.LogInformation($"Source: {ex.Source};\t Stack Trace: {ex.StackTrace};\t Message: {ex.Message};\t Inner Exception: {innserMsg};\n", "");
+                throw new Exception(ex.Message);
             }
         }
 
-        public async Task<(IList<tblPagewiseAction> buttonPermissions, IEnumerable<dynamic> permittedButtons)> GetButtonPermissins(string userId)
+        public async Task<(IList<PagewiseAction> buttonPermissions, IEnumerable<dynamic> permittedButtons)> GetButtonPermissins(string userId)
         {
             try
             {
@@ -120,7 +137,9 @@ namespace Boilerplate.Service.Services
             }
             catch (Exception ex)
             {
-                throw ex;
+                string innserMsg = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
+                _logger.LogInformation($"Source: {ex.Source};\t Stack Trace: {ex.StackTrace};\t Message: {ex.Message};\t Inner Exception: {innserMsg};\n", "");
+                throw new Exception(ex.Message);
             }
         }
     }
