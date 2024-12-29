@@ -1,0 +1,16 @@
+{
+  "ValidationSchemas": {
+    "GroupInfo": {
+      "QueryParams": {
+        "[GroupId]": {
+          "Required": true
+        },
+        "[GroupName]": {
+          "Required": true,
+          "MaxLength": 50
+        }
+      }
+    }
+  }
+}
+

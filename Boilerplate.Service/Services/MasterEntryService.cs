@@ -3,7 +3,10 @@ using Boilerplate.Repository.Interfaces;
 using Boilerplate.Repository.Repositories;
 using Boilerplate.Service.Interfaces;
 using Boilerplate.Service.Message;
+using Boilerplate.Service.ValidationHelpers;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.SqlServer.Management.Smo;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -16,11 +19,13 @@ namespace Boilerplate.Service.Services
     {
         private readonly IMasterEntryRepository _masterEntryRepository;
         private readonly ILogger<MasterEntryService> _logger;
+        private readonly IConfiguration _configuration;
 
-        public MasterEntryService(IMasterEntryRepository masterEntryRepository, ILogger<MasterEntryService> logger)
+        public MasterEntryService(IMasterEntryRepository masterEntryRepository, ILogger<MasterEntryService> logger, IConfiguration configuration)
         {
             _masterEntryRepository = masterEntryRepository;
             _logger = logger;
+            _configuration = configuration;
         }
 
         public Messages GetAll(MasterEntryModel item)
@@ -80,6 +85,9 @@ namespace Boilerplate.Service.Services
         {
             try
             {
+                var validationHelper = new ValidationHelper(_configuration);
+                validationHelper.ValidateModel(item, item.TableName);
+
                 var sqlQuery = $"INSERT INTO [dbo].[{item.TableName}] ";
 
                 sqlQuery += InsertQueryGeneratorWithKeyParams(item);
