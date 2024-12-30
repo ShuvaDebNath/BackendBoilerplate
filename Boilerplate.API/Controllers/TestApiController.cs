@@ -26,6 +26,12 @@ namespace Boilerplate.Web.Controllers
             _config = config;
         }
 
+        [HttpGet]
+        public IActionResult GetAccounts()
+        {
+            return Ok(new { Message = "API is working successfully!" });
+        }
+
         [AllowAnonymous]
         [HttpGet()]
         [Route("GetToken")]

@@ -1,8 +1,9 @@
+using Boilerplate.API.Filters;
 using Boilerplate.Repository;
 using Boilerplate.Service;
-using Boilerplate.API.Filters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,12 @@ ConfigurationManager configuration = builder.Configuration;
 
 // Add services to the container.
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddMemoryCache();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Boilerplate.API", Version = "v1" });
+});
 
 //Serilog Configuration
 builder.Logging.ConfigureLog(configuration);
@@ -59,7 +65,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 app.UseAuthentication();
 app.UseHttpsRedirection();
