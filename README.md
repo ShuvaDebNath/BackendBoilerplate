@@ -2,9 +2,18 @@
 
 ## Description
 
-- This boilerplate made for developer pressure relief purpose in their daily work.
-- In my 5 year's experience, I saw that, there has some common repeated work for backend developer. Common work means, regular CRUD where has no logic, no mathmatics or any other complex implementation. Just pick the data from frontend and bind in the model, then save the data, get the data, update the data, delete the data. So, I made a dynamic solution where developer can save their time and enjoy their life and doing many more things that can help in developer community and help the world. What I solved right now is, this dynamic solution will work for 2 Layer. That means, at a time, using one request they can insert/update/delete in 2 table. But Retrive data from 2 or multiple table.
+This boilerplate is designed to simplify and accelerate the daily workflow of backend developers by addressing repetitive and time-consuming tasks.
 
+With over five years of professional experience, I have observed that developers frequently encounter routine CRUD operations—tasks that involve no complex logic, algorithms, or intricate implementations. These operations typically consist of receiving data from the frontend, binding it to a model, and then saving, retrieving, updating, or deleting the data in a database.
+
+To alleviate this redundancy, I created a dynamic solution that allows developers to focus on more meaningful and impactful work. This boilerplate empowers developers to:
+
+- Perform dynamic CRUD operations efficiently with minimal effort.
+- Handle two-layer operations in a single request, enabling seamless insert, update, or delete operations across two related tables simultaneously.
+- Retrieve data from two or more tables dynamically, streamlining multi-table querying.
+- This solution is a step toward saving developers' time, enhancing productivity, and enabling them to contribute more effectively to the developer community and beyond.
+
+By incorporating this boilerplate into your workflow, you can achieve greater efficiency and focus on building innovative solutions that truly make a difference.
 
 ## Installation
 
