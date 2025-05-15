@@ -1,16 +1,12 @@
-﻿using Boilerplate.Entities.DBModels;
-using Boilerplate.Repository.Interfaces;
-using Boilerplate.Repository.Repositories;
-using Boilerplate.Service.Interfaces;
-using Boilerplate.Service.Message;
+﻿using Boilerplate.Contracts;
+using Boilerplate.Contracts.Repositories;
+using Boilerplate.Contracts.Responses;
+using Boilerplate.Contracts.Services;
 using Boilerplate.Service.ValidationHelpers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Microsoft.SqlServer.Management.Smo;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
 using System.Data;
 
 namespace Boilerplate.Service.Services

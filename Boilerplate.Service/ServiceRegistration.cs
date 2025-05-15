@@ -1,4 +1,5 @@
-﻿using Boilerplate.Service.Interfaces;
+﻿
+using Boilerplate.Contracts.Services;
 using Boilerplate.Service.Services;
 using Microsoft.Extensions.DependencyInjection;
 

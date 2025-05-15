@@ -1,7 +1,7 @@
-﻿using Boilerplate.Entities.DTOs;
-using Boilerplate.Repository.Interfaces;
-using Boilerplate.Service.Interfaces;
-using Boilerplate.Service.Message;
+﻿using Boilerplate.Contracts;
+using Boilerplate.Contracts.Repositories;
+using Boilerplate.Contracts.Responses;
+using Boilerplate.Contracts.Services;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Data;

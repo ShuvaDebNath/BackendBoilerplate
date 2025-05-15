@@ -1,13 +1,14 @@
-﻿using Boilerplate.Entities.DBModels;
-using Boilerplate.Service.Interfaces;
-using Boilerplate.Service.Message;
+﻿using Boilerplate.Contracts;
+using Boilerplate.Contracts.Enum;
+using Boilerplate.Contracts.Responses;
+using Boilerplate.Contracts.Services;
+using Boilerplate.Entities.DBModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using static Boilerplate.Entities.Enum.Enums;
 
 namespace Boilerplate.API.Controllers
 {
@@ -28,7 +29,7 @@ namespace Boilerplate.API.Controllers
 
         [AllowAnonymous]
         [HttpPost(nameof(Login))]
-        public async Task<IActionResult> Login([FromBody]UserInfo userInfo)
+        public async Task<IActionResult> Login([FromBody] UserDto userInfo)
         {
             var user = await _authService.GetAspNetUserAsync(userInfo);
 
@@ -54,7 +55,7 @@ namespace Boilerplate.API.Controllers
 
         [AllowAnonymous]
         [HttpPost(nameof(LoginWithPassword))]
-        public async Task<IActionResult> LoginWithPassword([FromBody] UserInfo userInfo)
+        public async Task<IActionResult> LoginWithPassword([FromBody] UserDto userInfo)
         {
             var user = await _authService.GetAspNetUserByPasswordAsync(userInfo);
 
@@ -144,7 +145,7 @@ namespace Boilerplate.API.Controllers
         }
         #endregion
 
-        private string GetToken(UserInfo userInfo)
+        private string GetToken(UserDto userInfo)
         {
             SymmetricSecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["SecurityJwt:Key"]));
             SigningCredentials credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);

@@ -1,4 +1,5 @@
-﻿using Boilerplate.Entities.DBModels;
+﻿using Boilerplate.Contracts.Repositories;
+using Boilerplate.Entities.DBModels;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -10,7 +11,7 @@ using System.Text;
 namespace Boilerplate.Repository
 {
 
-    public abstract class GenericRepository<T> : IGenericRepository<T> where T : class
+    public abstract class GenericRepository<TDto> : IGenericRepository<TDto> where TDto : class
     {
         public readonly string _connectionStringTransactionDB;
         public readonly string _connectionStringUserDB;
@@ -21,11 +22,11 @@ namespace Boilerplate.Repository
             _connectionStringUserDB = configuration.GetConnectionString("UserDBConnection");
         }
 
-        public async Task<IList<T>> GetAllAsync(string query, object? param = null)
+        public async Task<IList<TDto>> GetAllAsync(string query, object? param = null)
         {
             using var connection = new SqlConnection(_connectionStringTransactionDB);
 
-            var result = await connection.QueryAsync<T>(query, param);
+            var result = await connection.QueryAsync<TDto>(query, param);
 
             return result.ToList();
         }
@@ -261,6 +262,13 @@ namespace Boilerplate.Repository
                 throw new Exception(ex.Message);
             }
             return model.SerialNo;
+        }
+
+        public async Task<IList<TResult>> GetAllAsync<TResult>(string query, object? param = null) where TResult : class
+        {
+            using var connection = new SqlConnection(_connectionStringTransactionDB);
+
+            return (await connection.QueryAsync<TResult>(query, param)).ToList();
         }
     }
 }

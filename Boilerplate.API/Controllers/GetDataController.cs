@@ -1,5 +1,5 @@
-﻿using Boilerplate.Entities.DTOs;
-using Boilerplate.Service.Interfaces;
+﻿using Boilerplate.Contracts;
+using Boilerplate.Contracts.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Boilerplate.API.Controllers

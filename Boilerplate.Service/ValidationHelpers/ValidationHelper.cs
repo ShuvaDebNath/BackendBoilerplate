@@ -1,4 +1,5 @@
-﻿using Boilerplate.Entities.DBModels;
+﻿using Boilerplate.Contracts;
+using Boilerplate.Entities.DBModels;
 using Microsoft.Extensions.Configuration;
 
 namespace Boilerplate.Service.ValidationHelpers;

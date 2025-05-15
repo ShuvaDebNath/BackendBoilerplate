@@ -1,9 +1,8 @@
-﻿using Boilerplate.Entities.DBModels;
-using Boilerplate.Entities.DTOs;
-using Boilerplate.Entities.DTOs.UserCreate;
+﻿using Boilerplate.Contracts;
+using Boilerplate.Contracts.DTOs;
+using Boilerplate.Contracts.Repositories;
+using Boilerplate.Contracts.Services;
 using Boilerplate.Entities.Helpers;
-using Boilerplate.Repository.Interfaces;
-using Boilerplate.Service.Interfaces;
 using Microsoft.Extensions.Logging;
 
 namespace Boilerplate.Service.Services
@@ -19,7 +18,7 @@ namespace Boilerplate.Service.Services
             _logger = logger;
         }
 
-        public async Task<UserInfo> GetAspNetUserAsync(UserInfo userInfo)
+        public async Task<UserDto> GetAspNetUserAsync(UserDto userInfo)
         {
             var passwordHash = HelperExtention.Hash(userInfo.Password);
             userInfo.Password = passwordHash;
@@ -27,7 +26,7 @@ namespace Boilerplate.Service.Services
 
             return result;
         }
-        public async Task<UserInfo> GetAspNetUserByPasswordAsync(UserInfo userInfo)
+        public async Task<UserDto> GetAspNetUserByPasswordAsync(UserDto userInfo)
         {
             var passwordHash = HelperExtention.Hash(userInfo.Password);
             userInfo.Password = passwordHash;
@@ -35,14 +34,14 @@ namespace Boilerplate.Service.Services
 
             return result;
         }
-        public async Task<(UserControl menuPermissions, int[] menuPermitted)> GetUserControlsInfo(string id)
+        public async Task<(UserControlDto menuPermissions, int[] menuPermitted)> GetUserControlsInfo(string id)
         {
             var (menuPermissions, menuPermitted) = await _authRepository.GetUserControlsInfo(id);
 
             return (menuPermissions, menuPermitted);
         }
 
-        public async Task<IList<Menu>> GetAllPermittedMenu(string userId)
+        public async Task<IList<MenuDto>> GetAllPermittedMenu(string userId)
         {
             try
             {
@@ -54,7 +53,7 @@ namespace Boilerplate.Service.Services
                     return permittedMenus;
                 }
                 _logger.LogInformation($"Data Not Found!");
-                return (IList<Menu>)Enumerable.Empty<Menu>();
+                return (IList<MenuDto>)Enumerable.Empty<MenuDto>();
             }
             catch (Exception ex)
             {
@@ -95,19 +94,19 @@ namespace Boilerplate.Service.Services
             }
         }
         
-        public async Task<IList<Menus>> GetAllMenuByUserId(string userId)
+        public async Task<IList<MenusDto>> GetAllMenuByUserId(string userId)
         {
             try
             {
                 var permittedMenus = await _authRepository.GetAllMenuByUserId(userId);
 
-                List<Menus> menus = new List<Menus>();
+                List<MenusDto> menus = new List<MenusDto>();
 
                 if (permittedMenus.Rows.Count > 0)
                 {
                     for (var index = 0; index < permittedMenus.Rows.Count; index++)
                     {
-                        Menus menu = new Menus();
+                        MenusDto menu = new MenusDto();
                         menu.UiLink = permittedMenus.Rows[index]["UiLink"].ToString();
                         menu.MenuId = int.Parse(permittedMenus.Rows[index]["MenuId"].ToString());
                         menus.Add(menu);
@@ -116,7 +115,7 @@ namespace Boilerplate.Service.Services
                     return menus;
                 }
                 _logger.LogInformation($"Data Not Found!");
-                return (IList<Menus>)Enumerable.Empty<Menus>();
+                return (IList<MenusDto>)Enumerable.Empty<MenusDto>();
             }
             catch (Exception ex)
             {
@@ -126,7 +125,7 @@ namespace Boilerplate.Service.Services
             }
         }
 
-        public async Task<(IList<PagewiseAction> buttonPermissions, IEnumerable<dynamic> permittedButtons)> GetButtonPermissins(string userId)
+        public async Task<(IList<PagewiseActionDto> buttonPermissions, IEnumerable<dynamic> permittedButtons)> GetButtonPermissins(string userId)
         {
             try
             {

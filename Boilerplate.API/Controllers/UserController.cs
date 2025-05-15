@@ -1,14 +1,11 @@
 ﻿
-using Boilerplate.Entities.DTOs;
-using Boilerplate.Entities.DTOs.UserCreate;
+using Boilerplate.Contracts;
+using Boilerplate.Contracts.Responses;
+using Boilerplate.Contracts.Services;
 using Boilerplate.Entities.Helpers;
-using Boilerplate.Service.Interfaces;
-using Boilerplate.Service.Message;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Boilerplate.API.Controllers
 {

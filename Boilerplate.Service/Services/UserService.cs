@@ -1,15 +1,10 @@
-﻿using Boilerplate.Entities.DBModels;
-using Boilerplate.Entities.DTOs;
-using Boilerplate.Entities.DTOs.UserCreate;
+﻿using Boilerplate.Contracts;
+using Boilerplate.Contracts.DTOs;
+using Boilerplate.Contracts.Repositories;
+using Boilerplate.Contracts.Services;
+using Boilerplate.Entities.DBModels;
 using Boilerplate.Entities.Helpers;
-using Boilerplate.Repository.Interfaces;
-using Boilerplate.Service.Interfaces;
-using Boilerplate.Service.Message;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Threading.Tasks;
-
 
 namespace Boilerplate.Service.Services
 {
@@ -113,7 +108,7 @@ namespace Boilerplate.Service.Services
             int pin = rnd.Next(1000, 9999);
 
 
-            AspNetUser asp = new AspNetUser
+            AspNetUserDto asp = new AspNetUserDto
             {
                 Id = UserId,
                 Email = Email,
@@ -123,7 +118,7 @@ namespace Boilerplate.Service.Services
                 PasswordPin = pin.ToString("0000"),
             };
 
-            UserControl tbluser = new UserControl
+            UserControlDto tbluser = new UserControlDto
             {
                 UserId = Guid.NewGuid().ToString(),
                 Id = asp.Id,
@@ -137,12 +132,12 @@ namespace Boilerplate.Service.Services
 
             };
 
-            var pagewiseAction = new List<PagewiseAction>();
+            var pagewiseAction = new List<PagewiseActionDto>();
 
             foreach (MenuPerssion d in details)
             {
                 string menuPermission = "";
-                PagewiseAction obj = new PagewiseAction();
+                PagewiseActionDto obj = new PagewiseActionDto();
 
                 if (d.selected == true && d.ysnParent == false)
                 {
@@ -201,12 +196,12 @@ namespace Boilerplate.Service.Services
             menu = menu.Substring(0, (menu.Length - 1));
             #endregion
 
-            var pagewiseAction = new List<PagewiseAction>();
+            var pagewiseAction = new List<PagewiseActionDto>();
 
             foreach (MenuPerssion d in details)
             {
                 string menuPermission = "";
-                PagewiseAction obj = new PagewiseAction();
+                PagewiseActionDto obj = new PagewiseActionDto();
 
                 if (d.selected == true && d.ysnParent == false)
                 {
